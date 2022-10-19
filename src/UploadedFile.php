@@ -218,7 +218,7 @@ class UploadedFile implements UploadedFileInterface
      */
     private function writeFile(string $path): void
     {
-        $handle = fopen($path, 'wb+');
+        $handle = fopen($path, 'w');
         if (false === $handle) {
             throw Exception\UploadedFileErrorException::dueToUnwritablePath();
         }
